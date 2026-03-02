@@ -357,89 +357,35 @@ body {
 }
 
 /* Modal de email */
-.email-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+/* Sección de copia de email */
+.email-copy-section {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.email-copy-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
-  backdrop-filter: blur(5px);
-  animation: fadeIn 0.3s ease-out;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.email-modal-content {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 2rem;
-  max-width: 400px;
-  width: 90%;
-  position: relative;
-  animation: slideUp 0.3s ease-out;
-  box-shadow: 0 10px 40px rgba(0, 229, 212, 0.1);
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.email-modal-close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  color: var(--muted);
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-.email-modal-close:hover {
-  color: var(--accent);
-}
-
-.email-modal-content h3 {
-  color: var(--accent);
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-}
-
-.email-modal-content p {
-  color: var(--text);
+#emailText {
   background: var(--bg-deep);
-  padding: 1rem;
-  border-radius: 5px;
   border: 1px solid var(--border);
-  word-break: break-all;
-  margin-bottom: 1.5rem;
+  color: var(--accent);
+  padding: 0.7rem 1rem;
+  border-radius: 5px;
   font-family: 'Space Mono', monospace;
+  font-size: 0.9rem;
+  word-break: break-all;
 }
 
-.copy-btn {
-  width: 100%;
-  padding: 0.8rem 1.5rem;
+.copy-email-btn {
+  padding: 0.7rem 1.5rem;
   background: var(--accent);
   color: var(--bg);
   border: none;
@@ -447,52 +393,12 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s;
-  font-size: 0.95rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem;
 }
 
-.copy-btn:hover {
+.copy-email-btn:hover {
   background: #00d4c4;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 229, 212, 0.3);
-}
-
-.email-btn {
-  background: none;
-  border: 1px solid var(--border);
-  color: var(--text);
-  padding: 0.8rem 1.5rem;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 500;
-  transition: all 0.3s;
-  position: relative;
-  overflow: hidden;
-}
-
-.email-btn::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: radial-gradient(circle, rgba(0, 229, 212, 0.3), transparent);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: width 0.6s, height 0.6s;
-  opacity: 0.2;
-  z-index: -1;
-}
-
-.email-btn:hover {
-  color: var(--accent);
-  border-color: var(--accent);
-  box-shadow: 0 0 25px rgba(0, 229, 212, 0.3);
-  transform: scale(1.08);
-}
-
-.email-btn:hover::before {
-  width: 300px;
-  height: 300px;
 }
